@@ -1,6 +1,5 @@
 <HTML>
 <body>
-<h1>HELLO WORLD</h1>
-<p>oruifeufdmejhiuf</p>
+<h1> <style=color:blue>HELLO WORLD</style></h1>
 </body>
 </HTML>

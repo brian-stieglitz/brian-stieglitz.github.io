@@ -1,5 +1,5 @@
 <HTML>
 <body>
-HELLO WORLD
+<h1>HELLO WORLD</h1>
 </body>
 </HTML>

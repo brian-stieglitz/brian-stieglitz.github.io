@@ -115,47 +115,105 @@
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
     
     <script>
-    $(function () {
+$(function () {
+
     $('#container').highcharts({
-    		colors: ["#551A8B","#7FFF00"],
+
+        chart: {
+            polar: true,
+            type: 'line'
+        },
+
+				colors: ["#00BFFF","#7B68EE","#00008B","#4B0082","#7FFF00","#2E8B57","#6B8E23","#BA55D3","	#E6E6FA","#EE82EE","#ADFF2F","#333300","#FFFF33"],
+
         title: {
-            text: "Hillary Clinton's Favorability Rate",
-            x: -10 //center
+            text: 'Which Venues Play Which Shows',
+            x: -80
         },
-        subtitle: {
-            text: 'Source: My Facebook News Feed',
-            x: -20
+
+        pane: {
+            size: '275%'
         },
+
         xAxis: {
-            categories:["3/20/2016","2/27/2016","1/24/2016","12/21/2015","10/17/2015","8/16/2015","7/25/2015","5/31/2015","3/15/2015","11/23/2014","6/1/2014","11/18/2012","1/16/2011","10/30/2010","4/11/2010","1/24/2010","10/18/2009","8/3/2009","4/26/2009"]
-				},
+            categories: ['Rock Tribute', 'Rock', 'Jam', 'Alternative',
+                    'Pop', 'Indie', 'Ska', 'Raggae', 'Country', 'Singer/Songwriter', 'Disco', 'R&B', 'Prog', 'Rap', 'Funk', 'Elctronic', 'Metal', 'New Wave', 'Hardcore', 'Post Hardcore', 'Punk', 'Jazz'],
+            tickmarkPlacement: 'on',
+            lineWidth: 0
+        },
+
         yAxis: {
-            title: {
-                text: 'Ratings'
-            },
-            plotLines: [{
-                value: 0,
-                width: 1,
-                color: '#0d233a'
-            }]
+            gridLineInterpolation: 'polygon',
+            lineWidth: 0,
+            min: 0
         },
+
         tooltip: {
-            valueSuffix: '%'
+            shared: true,
+            pointFormat: '<span style="color:{series.color}">{series.name}: <b> shows{point.y:,.0f}</b><br/>'
         },
+
         legend: {
-            layout: 'vertical',
             align: 'right',
-            verticalAlign: 'middle',
-            borderWidth: 0
+            verticalAlign: 'top',
+            y: 100,
+            layout: 'vertical'
         },
+
         series: [{
-            name: 'Favorable',
-            data:[43,42,45,47,46,43,45,46,53,59,55,67,66,62,61,63,65,61,64]
-}, {
-            name: 'Unfavorable',
-            data:[56,55,52,51,50,55,48,50,44,38,42,28,31,34,35,35,32,35,34]
-}, 
-	]
+            name: 'KJ Farrels',
+            data: [5,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            pointPlacement: 'on'
+        }, {
+          name: 'Mr Beerys',
+            data: [0,2,0,0,2,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0],
+            pointPlacement: 'on'
+        }, {
+          name: 'Mulcahys',
+            data: [6,1,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0],
+            pointPlacement: 'on'
+        }, {
+          name: 'NYCB Theatre at Westbury',
+            data: [0,4,0,0,4,0,0,1,1,5,1,5,1,0,0,0,0,0,0,0,0,1],
+            pointPlacement: 'on'
+        }, {
+          name: 'The Space at Westbury',
+            data: [0,2,0,1,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0],
+            pointPlacement: 'on'
+        }, {
+          name: 'The Paramount',
+            data: [10,2,0,2,1,0,0,1,1,3,1,1,0,0,0,0,0,0,0,0,0],
+            pointPlacement: 'on'
+        }, {
+          name: '89 North Music Venue',
+            data: [1,3,1,0,0,0,1,1,0,0,0,1,0,0,1,0,0,0,0,0,0,0],
+            pointPlacement: 'on'
+        }, {
+          name: 'The Emporium',
+            data: [0,1,0,0,1,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0],
+            pointPlacement: 'on'
+        }, {
+          name: 'Revolution Bar and Music Hall',
+            data: [0,8,1,0,2,0,1,0,0,1,0,0,0,0,0,1,4,1,1,0,2,0],
+            pointPlacement: 'on'
+        }, {
+          name: 'Amityville Music Hall',
+            data: [0,2,0,1,0,0,0,0,0,1,0,0,1,0,0,0,8,0,7,3,10,0],
+            pointPlacement: 'on'
+        }, {
+          name: 'Nikon at Jones Beach Theatre',
+            data: [0,11,1,3,4,1,0,1,4,2,0,1,0,1,0,0,5,0,2,0,3,0],
+            pointPlacement: 'on'
+        }, {
+          name: 'Shorefront Park',
+            data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+            pointPlacement: 'on'
+        }, {
+            name: 'Shakers Pub',
+            data: [0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0],
+            pointPlacement: 'on'
+        }]
+
     });
 });
     </script>
